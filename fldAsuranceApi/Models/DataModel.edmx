@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Field">
+          <Key>
+            <PropertyRef Name="fldid" />
+          </Key>
+          <Property Name="fldid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Lang" Type="varchar" MaxLength="10" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="CName" Type="varchar" MaxLength="100" />
+          <Property Name="CTitle" Type="varchar" MaxLength="100" />
+          <Property Name="FacName" Type="varchar" MaxLength="100" />
+          <Property Name="FacAddress" Type="varchar" MaxLength="100" />
+          <Property Name="FacPhone" Type="varchar" MaxLength="100" />
+          <Property Name="SurgeonName" Type="varchar" MaxLength="100" />
+          <Property Name="SurgeonEmail" Type="varchar" MaxLength="100" />
+          <Property Name="CryolifeRep" Type="varchar" MaxLength="100" />
+          <Property Name="RegionMgr" Type="varchar" MaxLength="100" />
+          <Property Name="LetterAck" Type="varchar" MaxLength="50" />
+          <Property Name="LetterFinal" Type="varchar" MaxLength="50" />
+          <Property Name="LetterNone" Type="varchar" MaxLength="50" />
+          <Property Name="LetterSendTo" Type="varchar" MaxLength="100" />
+          <Property Name="ReturnSample" Type="varchar" MaxLength="3" />
+          <Property Name="RMANumber" Type="varchar" MaxLength="100" />
+          <Property Name="Product" Type="varchar" MaxLength="100" />
+          <Property Name="SerialLotNumber" Type="varchar" MaxLength="100" />
+          <Property Name="UDI" Type="varchar" MaxLength="50" />
+          <Property Name="Implanted" Type="varchar" MaxLength="3" />
+          <Property Name="DateIncident" Type="date" />
+          <Property Name="DateReported" Type="date" />
+          <Property Name="Outcome" Type="varchar" MaxLength="6000" />
+          <Property Name="Description" Type="varchar" MaxLength="6000" />
+          <Property Name="DocumentNumber" Type="varchar" MaxLength="50" />
+          <Property Name="EffectiveDate" Type="date" />
+          <Property Name="SubmittedBy" Type="varchar" MaxLength="100" />
+          <Property Name="SubmittedByEmail" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="FieldLang">
+          <Key>
+            <PropertyRef Name="langid" />
+          </Key>
+          <Property Name="langid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Lang" Type="varchar" MaxLength="10" />
+          <Property Name="Header" Type="varchar" MaxLength="100" />
+          <Property Name="Title" Type="varchar" MaxLength="100" />
+          <Property Name="SubTitle" Type="varchar" MaxLength="100" />
+          <Property Name="Instructions" Type="varchar" MaxLength="500" />
+          <Property Name="SectionA" Type="varchar" MaxLength="100" />
+          <Property Name="SectionB" Type="varchar" MaxLength="100" />
+          <Property Name="CName" Type="varchar" MaxLength="100" />
+          <Property Name="CTitle" Type="varchar" MaxLength="100" />
+          <Property Name="FacName" Type="varchar" MaxLength="100" />
+          <Property Name="FacAddress" Type="varchar" MaxLength="100" />
+          <Property Name="FacPhone" Type="varchar" MaxLength="100" />
+          <Property Name="SurgeonName" Type="varchar" MaxLength="100" />
+          <Property Name="SurgeonEmail" Type="varchar" MaxLength="100" />
+          <Property Name="CryolifeRep" Type="varchar" MaxLength="100" />
+          <Property Name="RegionMgr" Type="varchar" MaxLength="100" />
+          <Property Name="Letter" Type="varchar" MaxLength="100" />
+          <Property Name="LetterAck" Type="varchar" MaxLength="50" />
+          <Property Name="LetterFinal" Type="varchar" MaxLength="50" />
+          <Property Name="LetterNone" Type="varchar" MaxLength="50" />
+          <Property Name="LetterSendTo" Type="varchar" MaxLength="100" />
+          <Property Name="ReturnSample" Type="varchar" MaxLength="100" />
+          <Property Name="ReturnSampleY" Type="varchar" MaxLength="100" />
+          <Property Name="ReturnSampleN" Type="varchar" MaxLength="100" />
+          <Property Name="RMANumber" Type="varchar" MaxLength="100" />
+          <Property Name="Product" Type="varchar" MaxLength="100" />
+          <Property Name="SerialLotNumber" Type="varchar" MaxLength="100" />
+          <Property Name="UDI" Type="varchar" MaxLength="50" />
+          <Property Name="Implanted" Type="varchar" MaxLength="100" />
+          <Property Name="DateIncident" Type="varchar" MaxLength="100" />
+          <Property Name="DateReported" Type="varchar" MaxLength="100" />
+          <Property Name="Outcome" Type="varchar" MaxLength="2000" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="DocumentNumber" Type="varchar" MaxLength="2000" />
+          <Property Name="EffectiveDate" Type="varchar" MaxLength="2000" />
+          <Property Name="WelcomeMsg" Type="varchar" MaxLength="2000" />
+          <Property Name="LangName" Type="varchar" MaxLength="100" />
+          <Property Name="EditButton" Type="varchar" MaxLength="50" />
+          <Property Name="BackButton" Type="varchar" MaxLength="50" />
+          <Property Name="SubmitButton" Type="varchar" MaxLength="50" />
+          <Property Name="SubmittedBy" Type="varchar" MaxLength="100" />
+          <Property Name="DateSubmitted" Type="varchar" MaxLength="50" />
+          <Property Name="DialogMsg" Type="varchar" MaxLength="100" />
+          <Property Name="OK" Type="varchar" MaxLength="50" />
+          <Property Name="TitleHdr" Type="varchar" MaxLength="50" />
+          <Property Name="Confidential" Type="varchar" MaxLength="50" />
+          <Property Name="SOP" Type="varchar" MaxLength="50" />
+          <Property Name="Welcome" Type="varchar" MaxLength="50" />
+          <Property Name="AuthMsg" Type="varchar" MaxLength="100" />
+          <Property Name="AuthErrorMsg" Type="varchar" MaxLength="100" />
+          <Property Name="AuthNoAccessMsg" Type="varchar" MaxLength="100" />
+          <Property Name="AuthOKMsg" Type="varchar" MaxLength="100" />
+          <Property Name="LoginUserName" Type="varchar" MaxLength="100" />
+          <Property Name="LoginPassword" Type="varchar" MaxLength="100" />
+          <Property Name="LoginSubmit" Type="varchar" MaxLength="100" />
+          <Property Name="AppTitle" Type="varchar" MaxLength="100" />
+          <Property Name="NewForm" Type="varchar" MaxLength="100" />
+          <Property Name="Logout" Type="varchar" MaxLength="100" />
+          <Property Name="FormError" Type="varchar" MaxLength="100" />
+          <Property Name="AdminMenuHeader" Type="varchar" MaxLength="100" />
+          <Property Name="AdminMenuAccessControl" Type="varchar" MaxLength="100" />
+          <Property Name="AdminMenuLangSetup" Type="varchar" MaxLength="100" />
+          <Property Name="LangNameEnglish" Type="varchar" MaxLength="100" />
+          <Property Name="AdminLanguage" Type="varchar" MaxLength="100" />
+          <Property Name="AdminLanguageCode" Type="varchar" MaxLength="100" />
+          <Property Name="FormUpdated" Type="varchar" MaxLength="100" />
+          <Property Name="FormAdded" Type="varchar" MaxLength="100" />
+          <Property Name="UnsavedChanges" Type="varchar" MaxLength="100" />
+          <Property Name="NewLangRecord" Type="varchar" MaxLength="100" />
+          <Property Name="DeleteConfirm" Type="varchar" MaxLength="100" />
+          <Property Name="KeywordValues" Type="varchar" MaxLength="100" />
+          <Property Name="Keyword" Type="varchar" MaxLength="100" />
+          <Property Name="KeywordDescription" Type="varchar" MaxLength="100" />
+          <Property Name="KeywordValue" Type="varchar" MaxLength="100" />
+          <Property Name="AclInstructions" Type="varchar" MaxLength="200" />
+          <Property Name="AclGroups" Type="varchar" MaxLength="100" />
+          <Property Name="AclGroupsAdmin" Type="varchar" MaxLength="100" />
+          <Property Name="AclGroupsIT" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="FieldWorkFlow">
+          <Key>
+            <PropertyRef Name="fldwid" />
+          </Key>
+          <Property Name="fldwid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Role" Type="varchar" MaxLength="100" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Keywords">
+          <Key>
+            <PropertyRef Name="kid" />
+          </Key>
+          <Property Name="kid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Category" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Keyword" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Discription" Type="varchar" MaxLength="300" />
+          <Property Name="Value" Type="varchar" MaxLength="300" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DBModelStoreContainer">
+          <EntitySet Name="Field" EntityType="Self.Field" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FieldLang" EntityType="Self.FieldLang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FieldWorkFlow" EntityType="Self.FieldWorkFlow" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Keywords" EntityType="Self.Keywords" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Field">
+          <Key>
+            <PropertyRef Name="fldid" />
+          </Key>
+          <Property Name="fldid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lang" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="CName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FacName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FacAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FacPhone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SurgeonName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SurgeonEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CryolifeRep" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="RegionMgr" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LetterAck" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LetterFinal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LetterNone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LetterSendTo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ReturnSample" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="RMANumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Product" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SerialLotNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="UDI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Implanted" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="DateIncident" Type="DateTime" Precision="0" />
+          <Property Name="DateReported" Type="DateTime" Precision="0" />
+          <Property Name="Outcome" Type="String" MaxLength="6000" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="6000" FixedLength="false" Unicode="false" />
+          <Property Name="DocumentNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EffectiveDate" Type="DateTime" Precision="0" />
+          <Property Name="SubmittedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SubmittedByEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="FieldLang">
+          <Key>
+            <PropertyRef Name="langid" />
+          </Key>
+          <Property Name="langid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lang" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Header" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SubTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Instructions" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SectionA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SectionB" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FacName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FacAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FacPhone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SurgeonName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SurgeonEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CryolifeRep" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="RegionMgr" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Letter" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LetterAck" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LetterFinal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LetterNone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LetterSendTo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ReturnSample" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ReturnSampleY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ReturnSampleN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="RMANumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Product" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SerialLotNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="UDI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Implanted" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DateIncident" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DateReported" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Outcome" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DocumentNumber" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="EffectiveDate" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="WelcomeMsg" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="LangName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="EditButton" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BackButton" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SubmitButton" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SubmittedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DateSubmitted" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DialogMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="OK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TitleHdr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Confidential" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SOP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Welcome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AuthMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AuthErrorMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AuthNoAccessMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AuthOKMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LoginUserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LoginPassword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LoginSubmit" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AppTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NewForm" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Logout" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FormError" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AdminMenuHeader" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AdminMenuAccessControl" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AdminMenuLangSetup" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LangNameEnglish" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AdminLanguage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AdminLanguageCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FormUpdated" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FormAdded" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="UnsavedChanges" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NewLangRecord" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteConfirm" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="KeywordValues" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Keyword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="KeywordDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="KeywordValue" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AclInstructions" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="AclGroups" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AclGroupsAdmin" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AclGroupsIT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Fields" EntityType="Self.Field" />
+          <EntitySet Name="FieldLangs" EntityType="Self.FieldLang" />
+          <EntitySet Name="FieldWorkFlows" EntityType="DBModel.FieldWorkFlow" />
+          <EntitySet Name="Keywords" EntityType="DBModel.Keyword" />
+        </EntityContainer>
+        <EntityType Name="FieldWorkFlow">
+          <Key>
+            <PropertyRef Name="fldwid" />
+          </Key>
+          <Property Name="fldwid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Role" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Keyword">
+          <Key>
+            <PropertyRef Name="kid" />
+          </Key>
+          <Property Name="kid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Category" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Keyword1" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Discription" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Value" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBModelStoreContainer" CdmEntityContainer="DBEntities">
+          <EntitySetMapping Name="Fields">
+            <EntityTypeMapping TypeName="DBModel.Field">
+              <MappingFragment StoreEntitySet="Field">
+                <ScalarProperty Name="SubmittedByEmail" ColumnName="SubmittedByEmail" />
+                <ScalarProperty Name="SubmittedBy" ColumnName="SubmittedBy" />
+                <ScalarProperty Name="fldid" ColumnName="fldid" />
+                <ScalarProperty Name="Lang" ColumnName="Lang" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="CName" ColumnName="CName" />
+                <ScalarProperty Name="CTitle" ColumnName="CTitle" />
+                <ScalarProperty Name="FacName" ColumnName="FacName" />
+                <ScalarProperty Name="FacAddress" ColumnName="FacAddress" />
+                <ScalarProperty Name="FacPhone" ColumnName="FacPhone" />
+                <ScalarProperty Name="SurgeonName" ColumnName="SurgeonName" />
+                <ScalarProperty Name="SurgeonEmail" ColumnName="SurgeonEmail" />
+                <ScalarProperty Name="CryolifeRep" ColumnName="CryolifeRep" />
+                <ScalarProperty Name="RegionMgr" ColumnName="RegionMgr" />
+                <ScalarProperty Name="LetterAck" ColumnName="LetterAck" />
+                <ScalarProperty Name="LetterFinal" ColumnName="LetterFinal" />
+                <ScalarProperty Name="LetterNone" ColumnName="LetterNone" />
+                <ScalarProperty Name="LetterSendTo" ColumnName="LetterSendTo" />
+                <ScalarProperty Name="ReturnSample" ColumnName="ReturnSample" />
+                <ScalarProperty Name="RMANumber" ColumnName="RMANumber" />
+                <ScalarProperty Name="Product" ColumnName="Product" />
+                <ScalarProperty Name="SerialLotNumber" ColumnName="SerialLotNumber" />
+                <ScalarProperty Name="UDI" ColumnName="UDI" />
+                <ScalarProperty Name="Implanted" ColumnName="Implanted" />
+                <ScalarProperty Name="DateIncident" ColumnName="DateIncident" />
+                <ScalarProperty Name="DateReported" ColumnName="DateReported" />
+                <ScalarProperty Name="Outcome" ColumnName="Outcome" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+                <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FieldLangs">
+            <EntityTypeMapping TypeName="DBModel.FieldLang">
+              <MappingFragment StoreEntitySet="FieldLang">
+                <ScalarProperty Name="AclGroupsIT" ColumnName="AclGroupsIT" />
+                <ScalarProperty Name="AclGroupsAdmin" ColumnName="AclGroupsAdmin" />
+                <ScalarProperty Name="AclGroups" ColumnName="AclGroups" />
+                <ScalarProperty Name="AclInstructions" ColumnName="AclInstructions" />
+                <ScalarProperty Name="KeywordValue" ColumnName="KeywordValue" />
+                <ScalarProperty Name="KeywordDescription" ColumnName="KeywordDescription" />
+                <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+                <ScalarProperty Name="KeywordValues" ColumnName="KeywordValues" />
+                <ScalarProperty Name="DeleteConfirm" ColumnName="DeleteConfirm" />
+                <ScalarProperty Name="NewLangRecord" ColumnName="NewLangRecord" />
+                <ScalarProperty Name="UnsavedChanges" ColumnName="UnsavedChanges" />
+                <ScalarProperty Name="FormAdded" ColumnName="FormAdded" />
+                <ScalarProperty Name="FormUpdated" ColumnName="FormUpdated" />
+                <ScalarProperty Name="AdminLanguageCode" ColumnName="AdminLanguageCode" />
+                <ScalarProperty Name="AdminLanguage" ColumnName="AdminLanguage" />
+                <ScalarProperty Name="LangNameEnglish" ColumnName="LangNameEnglish" />
+                <ScalarProperty Name="AdminMenuLangSetup" ColumnName="AdminMenuLangSetup" />
+                <ScalarProperty Name="AdminMenuAccessControl" ColumnName="AdminMenuAccessControl" />
+                <ScalarProperty Name="AdminMenuHeader" ColumnName="AdminMenuHeader" />
+                <ScalarProperty Name="FormError" ColumnName="FormError" />
+                <ScalarProperty Name="Logout" ColumnName="Logout" />
+                <ScalarProperty Name="NewForm" ColumnName="NewForm" />
+                <ScalarProperty Name="AppTitle" ColumnName="AppTitle" />
+                <ScalarProperty Name="LoginSubmit" ColumnName="LoginSubmit" />
+                <ScalarProperty Name="LoginPassword" ColumnName="LoginPassword" />
+                <ScalarProperty Name="LoginUserName" ColumnName="LoginUserName" />
+                <ScalarProperty Name="AuthOKMsg" ColumnName="AuthOKMsg" />
+                <ScalarProperty Name="AuthNoAccessMsg" ColumnName="AuthNoAccessMsg" />
+                <ScalarProperty Name="AuthErrorMsg" ColumnName="AuthErrorMsg" />
+                <ScalarProperty Name="AuthMsg" ColumnName="AuthMsg" />
+                <ScalarProperty Name="Welcome" ColumnName="Welcome" />
+                <ScalarProperty Name="SOP" ColumnName="SOP" />
+                <ScalarProperty Name="Confidential" ColumnName="Confidential" />
+                <ScalarProperty Name="TitleHdr" ColumnName="TitleHdr" />
+                <ScalarProperty Name="OK" ColumnName="OK" />
+                <ScalarProperty Name="DialogMsg" ColumnName="DialogMsg" />
+                <ScalarProperty Name="DateSubmitted" ColumnName="DateSubmitted" />
+                <ScalarProperty Name="SubmittedBy" ColumnName="SubmittedBy" />
+                <ScalarProperty Name="SubmitButton" ColumnName="SubmitButton" />
+                <ScalarProperty Name="BackButton" ColumnName="BackButton" />
+                <ScalarProperty Name="EditButton" ColumnName="EditButton" />
+                <ScalarProperty Name="langid" ColumnName="langid" />
+                <ScalarProperty Name="Lang" ColumnName="Lang" />
+                <ScalarProperty Name="Header" ColumnName="Header" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
+                <ScalarProperty Name="Instructions" ColumnName="Instructions" />
+                <ScalarProperty Name="SectionA" ColumnName="SectionA" />
+                <ScalarProperty Name="SectionB" ColumnName="SectionB" />
+                <ScalarProperty Name="CName" ColumnName="CName" />
+                <ScalarProperty Name="CTitle" ColumnName="CTitle" />
+                <ScalarProperty Name="FacName" ColumnName="FacName" />
+                <ScalarProperty Name="FacAddress" ColumnName="FacAddress" />
+                <ScalarProperty Name="FacPhone" ColumnName="FacPhone" />
+                <ScalarProperty Name="SurgeonName" ColumnName="SurgeonName" />
+                <ScalarProperty Name="SurgeonEmail" ColumnName="SurgeonEmail" />
+                <ScalarProperty Name="CryolifeRep" ColumnName="CryolifeRep" />
+                <ScalarProperty Name="RegionMgr" ColumnName="RegionMgr" />
+                <ScalarProperty Name="Letter" ColumnName="Letter" />
+                <ScalarProperty Name="LetterAck" ColumnName="LetterAck" />
+                <ScalarProperty Name="LetterFinal" ColumnName="LetterFinal" />
+                <ScalarProperty Name="LetterNone" ColumnName="LetterNone" />
+                <ScalarProperty Name="LetterSendTo" ColumnName="LetterSendTo" />
+                <ScalarProperty Name="ReturnSample" ColumnName="ReturnSample" />
+                <ScalarProperty Name="ReturnSampleY" ColumnName="ReturnSampleY" />
+                <ScalarProperty Name="ReturnSampleN" ColumnName="ReturnSampleN" />
+                <ScalarProperty Name="RMANumber" ColumnName="RMANumber" />
+                <ScalarProperty Name="Product" ColumnName="Product" />
+                <ScalarProperty Name="SerialLotNumber" ColumnName="SerialLotNumber" />
+                <ScalarProperty Name="UDI" ColumnName="UDI" />
+                <ScalarProperty Name="Implanted" ColumnName="Implanted" />
+                <ScalarProperty Name="DateIncident" ColumnName="DateIncident" />
+                <ScalarProperty Name="DateReported" ColumnName="DateReported" />
+                <ScalarProperty Name="Outcome" ColumnName="Outcome" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+                <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+                <ScalarProperty Name="WelcomeMsg" ColumnName="WelcomeMsg" />
+                <ScalarProperty Name="LangName" ColumnName="LangName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FieldWorkFlows">
+            <EntityTypeMapping TypeName="DBModel.FieldWorkFlow">
+              <MappingFragment StoreEntitySet="FieldWorkFlow">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="fldwid" ColumnName="fldwid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Keywords">
+            <EntityTypeMapping TypeName="DBModel.Keyword">
+              <MappingFragment StoreEntitySet="Keywords">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Discription" ColumnName="Discription" />
+                <ScalarProperty Name="Keyword1" ColumnName="Keyword" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="kid" ColumnName="kid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
